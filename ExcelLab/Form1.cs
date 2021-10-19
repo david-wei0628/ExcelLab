@@ -22,7 +22,7 @@ namespace ExcelLab
             InitializeComponent();
         }
 
-        String diolog;
+        String diolog;//路徑暫存
 
         /// <summary>
         /// 建檔失敗，office excel
