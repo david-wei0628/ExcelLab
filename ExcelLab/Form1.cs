@@ -22,7 +22,7 @@ namespace ExcelLab
             InitializeComponent();
         }
 
-        String diolog;
+        String diolog;//路徑暫存
 
         /// <summary>
         /// 建檔失敗，office excel
@@ -93,11 +93,20 @@ namespace ExcelLab
         /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog path = new FolderBrowserDialog();
+            //FolderBrowserDialog path = new FolderBrowserDialog();
             OpenFileDialog file = new OpenFileDialog();
-            path.ShowDialog();
+            //path.ShowDialog();
             file.ShowDialog();
-            diolog = path.SelectedPath + file.SafeFileName;
+            diolog =file.FileName;
+            label1.Text = diolog;
+            //OpenFileDialog fileDialog = new OpenFileDialog();
+            //fileDialog.Multiselect = true;
+            //fileDialog.Title = "請選擇檔案";
+            //fileDialog.Filter = "所有檔案(*xls*)|*.xls*"; //設定要選擇的檔案的型別
+            //if (fileDialog.ShowDialog() == DialogResult.OK)
+            //{
+            //    string file = fileDialog.FileName;//返回檔案的完整路徑                
+            //}
         }
     }
 }
